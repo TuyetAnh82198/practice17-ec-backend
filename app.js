@@ -19,6 +19,11 @@ const cart = require("./routes/cart.js");
 
 const app = express();
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", process.env.CLIENT_APP);
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use(helmet());
 app.use(compression());
 app.use(express.static(path.join(__dirname, "./public/imgs")));
