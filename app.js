@@ -19,7 +19,9 @@ const cart = require("./routes/cart.js");
 
 const app = express();
 
-app.use(helmet());
+app.use(helmet(
+  {crossOriginResourcePolicy: false,}
+));
 app.use(compression());
 app.use(express.static(path.join(__dirname, "./public/imgs")));
 app.use(express.json());
