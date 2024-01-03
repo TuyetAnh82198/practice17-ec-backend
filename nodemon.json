@@ -1,6 +1,6 @@
 {
   "env": {
-    "CLIENT_APP": "http://localhost:3000",
+    "CLIENT_APP": "https://ec-client-app.onrender.com",
     "ADMIN_APP": "http://localhost:3001",
     "MONGDB_USER": "tuyetanh14102023",
     "MONGODB_PASS": "PDqQAHKRoaGJfjSk",
