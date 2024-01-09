@@ -272,6 +272,7 @@ const getOrderDetail = async (req, res) => {
     return res.status(200).json({
       order: { products: order.products, status: order.status, _id: order._id },
       user: {
+        _id: userInfor._id,
         fullName: userInfor.fullName,
         address: userInfor.address,
         email: userInfor.email,
